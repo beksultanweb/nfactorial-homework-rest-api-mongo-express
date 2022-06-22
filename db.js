@@ -1,6 +1,7 @@
 import { MongoClient as mongo } from "mongodb";
+import "dotenv/config";
 
-const url = "mongodb://localhost:27017";
+const url = process.env.url || "mongodb://localhost:27017";
 let db;
 
 const connect = () => {
