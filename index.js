@@ -12,6 +12,10 @@ app.use(bodyParser.json());
 
 connect();
 
+app.get('/', (req, res) => {
+    res.status(200).send();
+});
+
 app.get('/products', (req, res) => {
 
     getDB()
