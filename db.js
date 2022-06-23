@@ -1,7 +1,7 @@
 import { MongoClient as mongo } from "mongodb";
 import "dotenv/config";
 
-const url = process.env.url || "mongodb://localhost:27017";
+const url = process.env.url || "mongodb+srv://beksultan18:beksultan123@cluster0.rueb5rn.mongodb.net/?retryWrites=true&w=majority";
 let db;
 
 const connect = () => {
@@ -16,7 +16,8 @@ const connect = () => {
                 console.error(err);
                 return;
             }
-            db = client.db("sklad");
+            console.log("connected!");
+            db = client.db("todos");
         }
     )
 }
