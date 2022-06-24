@@ -7,7 +7,7 @@ import "dotenv/config";
 // import { encode } from "querystring";
 
 const app = express();
-const port =  8080;
+const port = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
